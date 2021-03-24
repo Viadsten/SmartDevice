@@ -3,24 +3,30 @@
 <head>
 
   @@include("source/html/base/head.html")
-  <title>ProjectName — Главная</title>
+  <title>SmartDevice — Главная</title>
 
 </head>
 <body>
+
+  <h1 class="visually-hidden">SmartDevice - Главная</h1>
 
   <div style="display: none;">
     @@include("build/img/sprite_auto.svg")
   </div>
 
   <div class="wrapper">
-    @@include("source/html/base/header.html", {
-      "main": true
-    })
+    <div class="main-header-bg">
+      @@include("source/html/base/header.html", {
+        "main": true
+      })
+      @@include("source/html/components/main-header.html")
+    </div>
 
     <main>
       <div class="container">
-        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-modal="success">modal--success link</a></p>
+        @@include("source/html/components/advantages.html")
+        @@include("source/html/components/products.html")
+        @@include("source/html/components/ask-me.html")
       </div>
     </main>
 

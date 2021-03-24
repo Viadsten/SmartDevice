@@ -58,7 +58,7 @@
     position: relative;
 
     width: 600px;
-    padding: 40px;
+    padding: 38px 40px;
 
     background-color: $color-default-white;
 
@@ -70,8 +70,15 @@
 
   &__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 17px;
+    right: 17px;
+    width: 19px;
+    height: 19px;
+    fill: $color-default-white;
+    svg {
+      width: 19px;
+      height: 19px;
+    }
   }
 
   &--responsive {
@@ -103,5 +110,68 @@
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
+  }
+
+}
+
+.modal__content {
+  background-color: $deep-sky-blue;
+  width: 490px;
+
+  .modal-feedback-title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: $font-family--roboto;
+    color: $color-default-white;
+
+    @include viewport--md {
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @include viewport--sm {
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  .feedback-form {
+    span {
+      flex-wrap: wrap !important;
+    }
+
+    input,
+    button {
+      width: 100% !important;
+      margin-right: 0;
+    }
+
+    label {
+      margin-top: 34px;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    textarea {
+      height: 104px;
+      margin-top: 0;
+      margin-bottom: 23px;
+    }
+
+  }
+
+
+  .modal-feedback-description {
+    margin: 15px 0 36px;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $font-family--mono;
+    color: $color-default-white;
+  }
+
+  .feedback-form {
+
   }
 }

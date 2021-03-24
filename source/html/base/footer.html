@@ -1,1 +1,101 @@
-<footer class="footer"></footer>
+<footer class="footer">
+  <div class="footer__links-wrp">
+    <div class="footer__icon-wrp">
+      <a class="footer__logo-link" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
+        <svg class="footer__logo" viewBox="0 0 202 52" width="202" height="52">
+          <use xlink:href="#logo--black" />
+        </svg>
+      </a>
+      <p class="footer__company footer__company--md">1999-2018 SD Service Devices</p>
+      <div class="footer__social">
+        <a class="footer__social-link" href="#" target="_blank" rel="nofollow noopener noreferrer"
+           aria-label="Мы в facebook">
+          <svg class="footer__social-icon" viewBox="0 0 27 27" width="27" height="27">
+            <use xlink:href="#facebook" />
+          </svg>
+        </a>
+        <a class="footer__social-link" href="#" target="_blank" rel="nofollow noopener noreferrer"
+           aria-label="Мы в одноклассниках">
+          <svg class="footer__social-icon" viewBox="0 0 27 27" width="27" height="27">
+            <use xlink:href="#odnoklassniki" />
+          </svg>
+        </a>
+        <a class="footer__social-link" href="#" target="_blank" rel="nofollow noopener noreferrer"
+           aria-label="Мы в вконтакте">
+          <svg class="footer__social-icon" viewBox="0 0 27 27" width="27" height="27">
+            <use xlink:href="#vk" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__accordion-wrp">
+      <div class="accordion">
+        <input type="checkbox" checked id="accordion-footer-1">
+        <label for="accordion-footer-1">
+          Разделы сайта
+        </label>
+        <div>
+          <ul>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Продукты</a>
+            </li>
+            <li>
+              <a href="#">Производство печатных плат</a>
+            </li>
+            <li>
+              <a href="#">Монтаж печатных плат</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Комплектующие</a>
+            </li>
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion">
+        <input type="checkbox" id="accordion-footer-2">
+        <label for="accordion-footer-2">
+          Наш офис
+        </label>
+        <div>
+          <ul>
+            <li>
+              <a target="_blank" rel="nofollow noopener noreferrer"
+                 href="https://yandex.ru/maps/10740/mytischi/house/olimpiyskiy_prospekt_s10/Z04YcQBiSkIOQFtvfXVwd39rYg==/?ll=37.772379%2C55.916386&z=16.86">
+                г. Мытищи, Олимпийский проспект, д.10
+              </a>
+            </li>
+            <li>
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            </li>
+            <li>
+              <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+            </li>
+            <li>
+              <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__about">
+    <p class="footer__copyright">Все права защищены</p>
+    <p class="footer__company">1999-2018 SD Service Devices</p>
+    <a class="footer__confidential" href="#">Условия  конфиденциальности</a>
+    <a class="footer__developed" href="#">Developed by wow studio</a>
+  </div>
+
+</footer>
+

@@ -1,1 +1,14 @@
-<p class="modal__description">Обычная модалка</p>
+<p class="modal-feedback-title">Закажите звонок</p>
+<p class="modal-feedback-description">Оставьте контакты, мы проконсультируем в удобное время</p>
+<form class="feedback-form" action="POST">
+  <span>
+    <input type="text" placeholder="Имя">
+    <input id="tel-number-modal" type="tel" placeholder="Телефон">
+  </span>
+  <textarea name="form-question" placeholder="Ваш вопрос"></textarea>
+  <span>
+    <button class="btn-border" type="submit">Задать вопрос</button>
+    <input type="checkbox" id="form-check-modal">
+    <label for="form-check-modal">Я согласен на обработку персональных данных</label>
+  </span>
+</form>

@@ -1,6 +1,260 @@
 .footer {
-  min-height: 100px;
-  padding: 0 60px;
+  width: 100%;
+  max-width: 1511px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 243px;
+  padding: 64px 50px 0;
+  background-color: $color-default-white;
 
-  background-color: $color-blue;
+  @include viewport--md {
+    padding: 19px 24px 0;
+  }
+
+  @include viewport--sm {
+    padding: 46px 0 0;
+  }
 }
+
+.footer__logo-link {
+  fill: $deep-sky-blue;
+  transition: fill $default-transition-settings;
+  &:hover {
+    fill: $color-white;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 18px;
+  }
+}
+
+.footer__social {
+  margin-top: 46px;
+  width: 216px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .footer__social-icon {
+    fill: #CDCDCD;
+    transition: fill $default-transition-settings;
+  }
+  @include viewport--md {
+    margin-top: 6px;
+    width: 129px;
+  }
+
+  @include viewport--md {
+    width: auto;
+  }
+
+  @include viewport--sm {
+    margin-top: 31px;
+  }
+}
+
+.footer__social-link {
+  width: 27px;
+  height: 27px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  &:hover {
+    .footer__social-icon {
+      fill: $deep-sky-blue;
+    }
+  }
+
+  @include viewport--md {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+
+  @include viewport--sm {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+.footer__links-wrp {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include viewport--md {
+    flex-wrap: wrap;
+  }
+}
+
+.footer__icon-wrp {
+  @include viewport--md {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 18px;
+    @include footer-line(100%);
+  }
+  @include viewport--sm {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 194px;
+    padding-bottom: 38px;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.footer__accordion-wrp {
+  margin-left: auto;
+  width: 100%;
+  margin-left: 65px;
+  max-width: 990px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include viewport--md {
+    margin-left: 0;
+    margin-top: 38px;
+    flex-wrap: wrap;
+  }
+
+  @include viewport--sm {
+    margin-top: 0px;
+  }
+
+  .accordion {
+    margin-bottom: 58px;
+    ul:not(:first-child) {
+      //margin-left: 75px;
+    }
+    margin-right: -75px;
+      ul {
+        margin-right: 75px;
+      }
+
+    @include viewport--lg {
+      max-width: calc(50% - 30px);
+
+    }
+
+    @include viewport--md {
+      width: 50%;
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+      &:nth-child(even) {
+        padding-left: 15px;
+      }
+
+    }
+
+    @include viewport--sm {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 0;
+      &:nth-child(even) {
+        padding-left: 0px;
+      }
+
+
+    }
+  }
+
+  .accordion div {
+    display: flex;
+    flex-wrap: wrap;
+    @include viewport--md {
+      flex-direction: column;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+  }
+
+  li {
+    max-width: 333px;
+  }
+}
+
+.footer__about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  @include footer-line(0);
+
+  @include viewport--lg {
+    justify-content: space-between;
+  }
+
+  @include viewport--sm {
+    padding-top: 28px;
+    padding-bottom: 26px;
+    height: unset;
+    flex-direction: column;
+  }
+}
+
+.footer__copyright,
+.footer__company,
+.footer__confidential,
+.footer__developed {
+  width: max-content;
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: $tangaroa;
+  opacity: 0.5;
+  text-transform: uppercase;
+  @include viewport--lg {
+    margin-left: 0 !important;
+  }
+}
+
+.footer__company {
+  margin-left: 73px;
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.footer__confidential {
+  margin-left: 142px;
+  letter-spacing: -0.02rem;
+}
+
+.footer__developed {
+  margin-left: auto;
+  @include viewport--sm {
+    margin-top: 21px;
+  }
+}
+
+.footer__company--md {
+  display: none;
+  @include viewport--md {
+    display: block !important;
+    margin-left: 43px;
+  }
+}
+
+.footer__copyright {
+  @include viewport--md {
+    display: none;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,147 @@
+.product-bg {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: $tangaroa;
+    height: 100%;
+    width: 100vw;
+    left: calc(50% - 50vw);
+  }
+}
+
+.product {
+  margin: 0 auto;
+  padding: 59px 0 127px;
+  max-width: 1170px;
+  width: 100%;
+
+  @include viewport--md {
+    margin-top: 1px;
+    padding: 50px 0 62px;
+  }
+
+  @include viewport--sm {
+    //margin-bottom: 64px;
+  }
+}
+
+.product__card-wrp {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 45px);
+  margin: 0 auto -30px;
+
+  @include viewport--md {
+    width: 100%;
+  }
+}
+
+.product__title {
+  position: relative;
+  margin-bottom: 52px;
+  font-family: $font-family--roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  color: $color-default-white;
+
+  @include viewport--md {
+    margin-top: 0;
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 49px;
+  }
+
+  @include viewport--sm {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 42px;
+  }
+}
+
+.product__card {
+  position: relative;
+  display: block;
+  width: calc(33% - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  height: 620px;
+  padding: 0;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 63px;
+    height: 63px;
+    background-color: $deep-sky-blue;
+    background-size: 6px 9px;
+    background-image: url('../img/svg/small-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.35;
+    }
+  }
+
+  @include viewport--md {
+    margin-right: 0;
+    margin-bottom: 46px;
+    width: 100%;
+    height: 256px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 30px;
+  }
+
+  img {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.2;
+    transition: opacity $default-transition-settings;
+
+    @include viewport--md {
+      object-position: top;
+      object-fit: contain;
+    }
+
+    @include viewport--sm {
+      height: 256px;
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 165px;
+    z-index: 2;
+    margin: 50px 45px;
+    font-weight: 400;
+    font-family: $font-family--roboto;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-default-white;
+
+    @include viewport--md {
+      margin: 40px 45px;
+    }
+
+    @include viewport--sm {
+      margin: 20px 36px;
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+.logo {
+  width: 202px;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .logo__icon {
+    fill: $deep-sky-blue;
+    transition: fill $default-transition-settings;
+  }
+
+  &:hover {
+    .logo__icon {
+      fill: $color-white;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    height: 45px;
+  }
+}

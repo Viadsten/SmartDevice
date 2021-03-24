@@ -30,6 +30,20 @@
   }
 }
 
+@mixin footer-line ($top) {
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: $top;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    height: 1px;
+    background-color: $color-finlandia;
+    opacity: 0.2;
+  }
+}
+
 // Mobile first
 
 /* @mixin viewport--md {

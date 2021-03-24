@@ -1,36 +1,140 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
-
-  background-color: $color-blue;
-
-  &__wrapper {
-    display: flex;
-    align-items: center;
+  max-width: 1511px;
+  width: 100%;
+  padding: 33px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 100%;
+    left: calc(50% - 50vw);
+    top: 0;
+    background-color: $tangaroa;
+    z-index: -1;
   }
 
-  a,
-  p {
-    color: $color-white;
-  }
+  @include viewport--md {
+    padding: 18px 25px;
 
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
-
-    list-style: none;
-
-    li {
-      margin-right: 20px;
+    .main-nav__link-text {
+      display: none;
     }
   }
 
-  .main-nav__toggle {
+  @include viewport--sm {
+    padding: 16px 17px;
+  }
+}
+
+.header__logo {
+  .logo__text {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  @include viewport--sm {
+
+    width: 38px !important;
+    height: 38px !important;
+
+    .logo__icon {
+      width: 38px !important;
+      height: 38px !important;
+    }
+
+    .logo__text {
+      display: none !important;
+    }
+  }
+
+}
+
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+}
+
+.main-nav__link {
+  display: flex;
+  align-items: center;
+  font-family: $font-family--mono;
+  color: $color-default-white;
+
+  &:hover {
+    .main-nav__link-icon {
+      fill: $color-default-white;
+    }
+  }
+}
+
+.main-nav__link-icon {
+  fill: $deep-sky-blue;
+  transition: fill $default-transition-settings;
+}
+
+.main-nav__link--mail {
+  .main-nav__link-icon {
+    margin-right: 20px;
+    width: 19px;
+    height: 14px;
+  }
+
+  @include viewport--md {
+    .main-nav__link-icon {
+      width: 26px;
+      height: 20px;
+      margin-right: 0;
+    }
+  }
+}
+
+.main-nav__link--tel {
+  margin-left: 88px;
+
+  .main-nav__link-icon {
+    margin-right: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  @include viewport--md {
+    margin-left: 33px;
+
+    .main-nav__link-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 0;
+    }
+  }
+
+  @include viewport--sm {
+    margin-left: 21px;
+  }
+}
+
+.main-nav__button {
+  width: 182px;
+  margin-left: 48px;
+
+  &:hover {
+    border-color: $deep-sky-blue;
+  }
+
+  @include viewport--lg {
     display: none;
   }
 }
