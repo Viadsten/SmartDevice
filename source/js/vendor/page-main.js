@@ -7,6 +7,9 @@ document.querySelector('.main-header__button').addEventListener('click', () => {
   smoothScroll('ask-me');
 });
 
+document.querySelector('.main-nav__button').addEventListener('click', () => {
+  document.getElementById('tel-number-modal').focus();
+});
 
 function currentYPosition() {
   // Firefox, Chrome, Opera, Safari

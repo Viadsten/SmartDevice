@@ -97,6 +97,12 @@
     padding: 25px 27px;
   }
 
+  @include viewport--md {
+    min-height: 230px;
+    padding-right: 5px;
+    padding-bottom: 18px;
+  }
+
   @include viewport--sm {
     width: 100%;
     margin-bottom: 20px;
@@ -140,8 +146,13 @@
       margin-top: 10px;
     }
 
-    @include viewport--sm {
+    @include viewport--md {
+      padding-right: 19px;
+    }
 
+    @include viewport--sm {
+      padding-bottom: 0px;
+      padding-right: 8px;
     }
   }
 }

@@ -681,7 +681,7 @@ button,
   margin-left: 48px; }
   .main-nav__button:hover {
     border-color: #00b2ff; }
-  @media (max-width: 1439px) {
+  @media (max-width: 1023px) {
     .main-nav__button {
       display: none; } }
 
@@ -1134,7 +1134,8 @@ button,
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0);
   border: none;
-  border-radius: 5px; }
+  border-radius: 5px;
+  cursor: pointer; }
 
 .btn-border {
   font-family: 'Roboto Condensed', sans-serif;
@@ -1148,7 +1149,8 @@ button,
   border: 1px solid #ffffff;
   border-radius: 5px;
   color: #ffffff;
-  font-weight: 700; }
+  font-weight: 700;
+  cursor: pointer; }
 
 .main-header-bg {
   background-color: #1b2d37;
@@ -1520,6 +1522,11 @@ button,
   @media (max-width: 1439px) {
     .advantages__item {
       padding: 25px 27px; } }
+  @media (max-width: 1023px) {
+    .advantages__item {
+      min-height: 230px;
+      padding-right: 5px;
+      padding-bottom: 18px; } }
   @media (max-width: 767px) {
     .advantages__item {
       width: 100%;
@@ -1558,6 +1565,13 @@ button,
     @media (max-width: 1439px) {
       .advantages__item p {
         margin-top: 10px; } }
+    @media (max-width: 1023px) {
+      .advantages__item p {
+        padding-right: 19px; } }
+    @media (max-width: 767px) {
+      .advantages__item p {
+        padding-bottom: 0px;
+        padding-right: 8px; } }
 
 .about-us {
   position: relative;
@@ -1847,6 +1861,10 @@ button,
     .feedback-form input[type=tel]::placeholder,
     .feedback-form textarea::placeholder {
       color: #ffffff; }
+    .feedback-form input[type=text]:hover,
+    .feedback-form input[type=tel]:hover,
+    .feedback-form textarea:hover {
+      background-color: rgba(255, 255, 255, 0.2); }
     @media (max-width: 767px) {
       .feedback-form input[type=text],
       .feedback-form input[type=tel],
@@ -1887,17 +1905,23 @@ button,
     border: 1px solid #ffffff;
     border-radius: 5px;
     color: #ffffff;
-    font-weight: 700; }
+    font-weight: 700;
+    cursor: pointer; }
     @media (max-width: 767px) {
       .feedback-form button {
         width: 100%; } }
+    .feedback-form button:hover {
+      background-color: rgba(255, 255, 255, 0.2); }
   .feedback-form input[type=checkbox] {
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
     clip: rect(0 0 0 0); }
+  .feedback-form input[type=checkbox]:focus + label {
+    color: #fff; }
   .feedback-form input[type=checkbox] + label {
+    cursor: pointer;
     position: relative;
     display: block;
     height: 27px;
@@ -1921,6 +1945,8 @@ button,
       width: 16px;
       height: 16px;
       border: 1px solid #ffffff; }
+    .feedback-form input[type=checkbox] + label:hover {
+      color: white; }
     @media (max-width: 1023px) {
       .feedback-form input[type=checkbox] + label {
         max-width: 270px; } }
@@ -1955,7 +1981,7 @@ button,
 .ask-me-bg {
   position: absolute;
   top: 93px;
-  left: unset;
+  left: 142px;
   width: 100vw;
   height: 100%;
   background-image: url("../img/bg/ask-me-bg.svg");
@@ -1998,7 +2024,7 @@ button,
           align-items: center; }
   .ask-me__left-side img {
     margin-bottom: 39px;
-    margin-left: 51px;
+    margin-left: 180px;
     max-width: 511px;
     width: 100%; }
     @media (max-width: 1439px) {
@@ -2010,15 +2036,15 @@ button,
       display: none; } }
 
 .ask-me__right-side {
+  margin-right: 30px;
   width: 49%;
   min-width: 570px; }
   @media (max-width: 1023px) {
     .ask-me__right-side {
+      margin: 0 auto;
       min-width: 590px;
-      width: 100%; }
-      .ask-me__right-side .feedback-form {
-        margin: 0 auto;
-        max-width: 590px !important; } }
+      width: 100%;
+      max-width: 590px !important; } }
   @media (max-width: 767px) {
     .ask-me__right-side {
       min-width: unset; } }

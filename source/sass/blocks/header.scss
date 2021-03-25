@@ -19,6 +19,10 @@
   }
 
   @include viewport--md {
+
+  }
+
+  @include viewport--md {
     padding: 18px 25px;
 
     .main-nav__link-text {
@@ -134,7 +138,7 @@
     border-color: $deep-sky-blue;
   }
 
-  @include viewport--lg {
+  @include viewport--md {
     display: none;
   }
 }
